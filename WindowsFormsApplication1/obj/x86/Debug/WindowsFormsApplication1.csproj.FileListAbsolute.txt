@@ -7,3 +7,11 @@ c:\users\sope\documents\visual studio 2010\Projects\WindowsFormsApplication1\Win
 c:\users\sope\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 c:\users\sope\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 c:\users\sope\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.frmConCorridas.resources
+C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache

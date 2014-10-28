@@ -11,8 +11,11 @@ namespace WindowsFormsApplication1
 {
     public partial class frmConCorridas : Form
     {
+
+
         IList<MAIN> colMain;
         double demoraProm = 0;
+        double varianza = 0;
         public frmConCorridas()
         {
             InitializeComponent();
@@ -20,6 +23,12 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            for (int w = 0; w < 5; w++)
+            {
+                chart1.Series[w].Points.Clear();
+            }
+
             int cnatCorridas= Convert.ToInt32(txtCantidaddecorridas.Text);
             colMain = new List<MAIN>();
             for (int p = 0; p < cnatCorridas; p++)
@@ -27,7 +36,7 @@ namespace WindowsFormsApplication1
 
                 MAIN mm1 = new MAIN();
 
-                mm1.inizialisacion(Convert.ToDouble(txtLamda.Text.Trim()), Convert.ToDouble(txtMu.Text.Trim()), chkConstante.Checked);
+                mm1.inizialisacion(Convert.ToDouble(txtLamda.Text.Trim()), Convert.ToDouble(txtMu.Text.Trim()), true);
                 bool fin = false;
 
                 int c_tiradas = 0;
@@ -86,6 +95,7 @@ namespace WindowsFormsApplication1
                     mm1.promTiempoDeServicio = t_servicio;
                     demoraProm += t_servicio;
 
+                   
                 
 
                 colMain.Add(mm1);
@@ -98,31 +108,44 @@ namespace WindowsFormsApplication1
             //double ios = mm1.ios;
             //if (mm1.n > 0)
             //    sOcupado += mm1.getReloj() - ios;
-           
-
-  
-           
 
 
-          
 
-             //calculo tiempo promedio esperado en cola por los clientes
-            
-        
+
+
+
+
+
+
+            demoraProm = demoraProm / colMain.Count;
+            double acumVar = 0;
+            foreach (MAIN col in colMain)
+            {
+                acumVar += ((col.promTiempoDeServicio - demoraProm) * (col.promTiempoDeServicio - demoraProm));
+            }
+            varianza = acumVar / (colMain.Count-1);
 
 
             // calculo el tiempo promedio de servicio
           
-            demoraProm = demoraProm / colMain.Count;
-
-            int k=Convert.ToInt32(txtParametroDespla.Text);
-            double acumK = 0;
-            for (int i = k; i < colMain.Count; i++)
+           
+            int[] ks = new int[5];
+            ks[0] = Convert.ToInt32(txtParametroDespla1.Text);
+            ks[1] = Convert.ToInt32(txtParametroDespla2.Text);
+            ks[2] = Convert.ToInt32(txtParametroDespla3.Text);
+            ks[3] = Convert.ToInt32(txtParametroDespla4.Text);
+            ks[4] = Convert.ToInt32(txtParametroDespla5.Text);
+            
+            for (int p = 0; p < 5; p++)
             {
-                acumK += (colMain[i-k].promTiempoDeServicio - demoraProm) * (colMain[i].promTiempoDeServicio - demoraProm);
-                
+               double acumK = 0;
+                for (int i = ks[p]; i < colMain.Count; i++)
+                {
+                    acumK += (((colMain[i - ks[p]].promTiempoDeServicio - demoraProm) * (colMain[i].promTiempoDeServicio - demoraProm))/colMain.Count) / varianza;
+                    chart1.Series[p].Points.AddXY(Convert.ToDouble(i), acumK);
+                }
+                acumK = acumK * (1 / (colMain.Count - 1));
             }
-            acumK = acumK * (1 / (colMain.Count - 1));
 
         }
     }
