@@ -15,3 +15,4 @@ C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplicatio
 C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.frmConCorridas.resources
 C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Sope\Documents\Proyectos BitBucket\TP-Simulacion\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

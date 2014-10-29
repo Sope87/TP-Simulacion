@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1
                double acumK = 0;
                 for (int i = ks[p]; i < colMain.Count; i++)
                 {
-                    acumK += (((colMain[i - ks[p]].promTiempoDeServicio - demoraProm) * (colMain[i].promTiempoDeServicio - demoraProm))/colMain.Count) / varianza;
+                    acumK += (((colMain[i - ks[p]].promTiempoDeServicio - demoraProm) * (colMain[i].promTiempoDeServicio - demoraProm)) / colMain.Count) / varianza;
                     chart1.Series[p].Points.AddXY(Convert.ToDouble(i), acumK);
                 }
                 acumK = acumK * (1 / (colMain.Count - 1));
